@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal AI Assistant</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>    
+    <div class="container">
+        <h1>Chat.AI</h1>
+        <form action="/generate" method="POST">
+            <textarea name="prompt" id="prompt" rows="1" cols="50" placeholder="What do you need help with?"></textarea><br>
+            <input type="submit" value="Generate"><br>
+        </form>
+        <div id="response">
+            {% if response %}
+                <h2>Response:</h2>
+                <div class="response-box">
+                    <p>{{ response }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
