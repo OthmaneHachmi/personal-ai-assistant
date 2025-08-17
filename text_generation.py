@@ -9,7 +9,7 @@ class PersonalAssistant:
     
     def __init__(self):
         #Define the model
-        self.model = "mixtral-8x7b-32768"
+        self.model = "openai/gpt-oss-20b"
         #Get the api key from the environment variables
         self.client = Groq(api_key=os.environ.get("GROQ_API_KEY"),)
     
